@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7d44b1c-64f9-4bea-8834-f1af59e284f8" name="Default Changelist" comment="inicio" />
+    <list default="true" id="e7d44b1c-64f9-4bea-8834-f1af59e284f8" name="Default Changelist" comment="inicio">
+      <change afterPath="$PROJECT_DIR$/tktest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client1.py" beforeDir="false" afterPath="$PROJECT_DIR$/client1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client2.py" beforeDir="false" afterPath="$PROJECT_DIR$/client2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/servidor.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tktest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/servidor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+            <state relative-caret-position="210">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="e#87#134#0" expanded="true" />
               </folding>
@@ -36,20 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ip.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="570">
+              <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="e#65#112#0" expanded="true" />
               </folding>
@@ -60,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
                 <element signature="e#65#112#0" expanded="true" />
               </folding>
@@ -84,24 +91,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client2.py" />
-        <option value="$PROJECT_DIR$/client1.py" />
-        <option value="$PROJECT_DIR$/servidor.py" />
         <option value="$PROJECT_DIR$/ip.py" />
+        <option value="$PROJECT_DIR$/client2.py" />
+        <option value="$PROJECT_DIR$/servidor.py" />
+        <option value="$PROJECT_DIR$/client1.py" />
+        <option value="$PROJECT_DIR$/tktest.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="840" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="18" />
     <option name="y" value="1" />
-    <option name="width" value="518" />
+    <option name="width" value="741" />
     <option name="height" value="767" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -140,6 +141,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -157,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.servidor">
+  <component name="RunManager" selected="Python.tktest">
     <configuration name="client1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="socket" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,12 +248,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tktest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="socket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tktest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ip" />
-        <item itemvalue="Python.servidor" />
+        <item itemvalue="Python.tktest" />
         <item itemvalue="Python.client2" />
         <item itemvalue="Python.client1" />
+        <item itemvalue="Python.servidor" />
+        <item itemvalue="Python.ip" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +292,8 @@
       <updated>1560565230079</updated>
       <workItem from="1560565235551" duration="1140000" />
       <workItem from="1560566447653" duration="936000" />
-      <workItem from="1560567465638" duration="7940000" />
+      <workItem from="1560567465638" duration="32640000" />
+      <workItem from="1560813885625" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <created>1560624100832</created>
@@ -280,17 +306,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10016000" />
+    <option name="totallyTimeSpent" value="35943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1371" height="771" extended-state="7" />
+    <frame x="-2" y="0" width="1371" height="771" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25701287" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25886992" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32093024" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19409938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44651163" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -299,13 +326,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.39285713" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.95341617" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.26397514" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32868218" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3297953" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32946298" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,26 +343,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="inicio" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/socket$ip.coverage" NAME="ip Coverage Results" MODIFIED="1560623345705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/socket$client2.coverage" NAME="client2 Coverage Results" MODIFIED="1560614702258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/socket$servidor.coverage" NAME="servidor Coverage Results" MODIFIED="1560623296122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/socket$client1.coverage" NAME="client1 Coverage Results" MODIFIED="1560614699545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/socket$ip.coverage" NAME="ip Coverage Results" MODIFIED="1560631992070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/socket$servidor.coverage" NAME="servidor Coverage Results" MODIFIED="1560789956631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/socket$client2.coverage" NAME="client2 Coverage Results" MODIFIED="1560789972013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/socket$client1.coverage" NAME="client1 Coverage Results" MODIFIED="1560789962918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/socket$tktest.coverage" NAME="tktest Coverage Results" MODIFIED="1560820609234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/lib/python3.6/selectors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="578" column="4" selection-start-line="578" selection-start-column="4" selection-end-line="611" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#65#112#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -346,10 +364,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib/python3.6/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="234" column="25" lean-forward="true" selection-start-line="234" selection-start-column="25" selection-end-line="234" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ip.py" />
     <entry file="file://$PROJECT_DIR$/servidor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="e#87#134#0" expanded="true" />
           </folding>
@@ -358,25 +384,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#65#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.6/socketserver.py">
+    <entry file="file://$PROJECT_DIR$/client2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="234" column="25" lean-forward="true" selection-start-line="234" selection-start-column="25" selection-end-line="234" selection-end-column="25" />
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#65#112#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ip.py">
+    <entry file="file://$PROJECT_DIR$/tktest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="420">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
         </state>
       </provider>
     </entry>

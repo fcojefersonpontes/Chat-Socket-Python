@@ -17,13 +17,20 @@ def receive():
 
 def send(event=None):  # event is passed by binders.
     """Handles sending of messages."""
-    msg = my_msg.get()
-    my_msg.set("")  # Clears input field.
+    msg = my_destino.get()+my_msg.get()
+    my_destino.set("")  # Clears input field.
+    my_msg.set("")      # Clears input field.
     client_socket.send(bytes(msg, "utf8"))
     if msg == "{quit}":
         client_socket.close()
         top.quit()
 
+def sair(event=None):  # event is passed by binders.
+    """Encerrar a conexão"""
+    msg = "{quit}"
+    client_socket.send(bytes(msg, "utf8"))
+    client_socket.close()
+    top.quit()
 
 def on_closing(event=None):
     """This function is to be called when the window is closed."""
@@ -32,30 +39,47 @@ def on_closing(event=None):
 
 
 top = tkinter.Tk()
-top.title("Chatter")
+top.title("Client1")
+top.geometry("420x420+100+100")
+
+a = tkinter.Label(top, text="Caixa de Entrada", width=18, height=1)
+a.pack(anchor="w")
 
 messages_frame = tkinter.Frame(top)
+
+my_destino = tkinter.StringVar()  # For the destino to be sent.
 my_msg = tkinter.StringVar()  # For the messages to be sent.
-my_msg.set("Type your messages here.")
+
 scrollbar = tkinter.Scrollbar(messages_frame)  # To navigate through past messages.
 # Following will contain the messages.
+
 msg_list = tkinter.Listbox(messages_frame, height=15, width=50, yscrollcommand=scrollbar.set)
+msg_list.place(y=10)
 scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
+#scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y)
 msg_list.pack(side=tkinter.LEFT, fill=tkinter.BOTH)
-msg_list.pack()
+
 messages_frame.pack()
+
+destino_field = tkinter.Entry(top, textvariable=my_destino)
+destino_field.bind("<Return>", send)
+destino_field.pack(fill="x")
 
 entry_field = tkinter.Entry(top, textvariable=my_msg)
 entry_field.bind("<Return>", send)
-entry_field.pack()
-send_button = tkinter.Button(top, text="Send", command=send)
+entry_field.pack(expand=True, fill="x")
+
+send_button = tkinter.Button(top, text="Enviar Mensagem", command=send)
 send_button.pack()
+
+exit_button = tkinter.Button(top, text="Sair", command=sair)
+exit_button.pack(side="left")
 
 top.protocol("WM_DELETE_WINDOW", on_closing)
 
 """----Now comes the sockets part----"""
-HOST = input(socket.gethostbyname(socket.gethostname()))
-PORT = input('Enter port: ')
+HOST = "localhost"
+PORT = 33000
 if not PORT:
     PORT = 33000
 else:

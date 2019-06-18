@@ -3,13 +3,12 @@
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
 
-
 def accept_incoming_connections():
     """Sets up handling for incoming clients."""
     while True:
         client, client_address = SERVER.accept()
         print("%s:%s has connected." % client_address)
-        client.send(bytes("Greetings from the cave! Now type your name and press enter!", "utf8"))
+        client.send(bytes("Caixa de Entrada", "utf8"))
         addresses[client] = client_address
         Thread(target=handle_client, args=(client,)).start()
 
@@ -18,7 +17,7 @@ def handle_client(client):  # Takes client socket as argument.
     """Handles a single client connection."""
 
     name = client.recv(BUFSIZ).decode("utf8")
-    welcome = 'Welcome %s! If you ever want to quit, type {quit} to exit.' % name
+    welcome = " Para sair digite {Desconectar}."
     client.send(bytes(welcome, "utf8"))
     msg = "%s has joined the chat!" % name
     broadcast(bytes(msg, "utf8"))
@@ -46,7 +45,7 @@ def broadcast(msg, prefix=""):  # prefix is for name identification.
 clients = {}
 addresses = {}
 
-HOST = "127.0.1.1"
+HOST = "localhost"
 PORT = 33000
 BUFSIZ = 1024
 ADDR = (HOST, PORT)
