@@ -1,62 +1,53 @@
-#!/usr/bin/env python3
-"""Server for multithreaded (asynchronous) chat application."""
-from socket import AF_INET, socket, SOCK_STREAM
+import socket
 from threading import Thread
-
-def accept_incoming_connections():
-    """Sets up handling for incoming clients."""
-    while True:
-        client, client_address = SERVER.accept()
-        print("%s:%s has connected." % client_address)
-        client.send(bytes("Caixa de Entrada", "utf8"))
-        addresses[client] = client_address
-        Thread(target=handle_client, args=(client,)).start()
+HOST = 'localhost' # Endereco IP do Servidor
+PORT = 6012  # Porta que o Servidor esta
+tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+orig = (HOST, PORT)
+tcp.bind(orig)
+tcp.listen(3)
+listClient = []
 
 
-def handle_client(client):  # Takes client socket as argument.
-    """Handles a single client connection."""
-
-    name = client.recv(BUFSIZ).decode("utf8")
-    welcome = " Para sair digite {Desconectar}."
-    client.send(bytes(welcome, "utf8"))
-    msg = "%s has joined the chat!" % name
-    broadcast(bytes(msg, "utf8"))
-    clients[client] = name
-
-    while True:
-        msg = client.recv(BUFSIZ)
-        if msg != bytes("{quit}", "utf8"):
-            broadcast(msg, name + ": ")
-        else:
-            client.send(bytes("{quit}", "utf8"))
-            client.close()
-            del clients[client]
-            broadcast(bytes("%s has left the chat." % name, "utf8"))
-            break
+for s in range(3):
+     con,cliente = tcp.accept()
+     listClient.append(con)
 
 
-def broadcast(msg, prefix=""):  # prefix is for name identification.
-    """Broadcasts a message to all the clients."""
 
-    for sock in clients:
-        sock.send(bytes(prefix, "utf8") + msg)
+for x in range(3):
+        print(f'Conectado com {listClient[x]}')
+
+def recebemsg1():
+    msg=listClient[0].recv(1024)
+    for soc in listClient:
+        if soc!=listClient[0]:
+           soc.send(msg)
+    print(msg.decode('utf-8'))
 
 
-clients = {}
-addresses = {}
+def recebemsg2():
+    tex=listClient[1].recv(1024)
+    for soc in listClient:
+        if soc!=listClient[1]:
+           soc.send(tex)
+    print(tex.decode('utf-8'))
 
-HOST = "localhost"
-PORT = 33000
-BUFSIZ = 1024
-ADDR = (HOST, PORT)
+def recebemsg3():
+    com=listClient[2].recv(1024)
+    for soc in listClient:
+        if soc!=listClient[2]:
+           soc.send(com)
+    print(com.decode('utf-8'))
 
-SERVER = socket(AF_INET, SOCK_STREAM)
-SERVER.bind(ADDR)
+while True:
+    cliente1 = Thread(target=recebemsg1())
+    cliente1.start()
 
-if __name__ == "__main__":
-    SERVER.listen(5)
-    print("Waiting for connection...")
-    ACCEPT_THREAD = Thread(target=accept_incoming_connections)
-    ACCEPT_THREAD.start()
-    ACCEPT_THREAD.join()
-SERVER.close()
+    cliente2 = Thread(target=recebemsg2())
+    cliente2.start()
+
+    cliente3=Thread(target=recebemsg3())
+    cliente3.start()
+
+tcp.close()
