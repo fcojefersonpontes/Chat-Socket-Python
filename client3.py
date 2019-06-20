@@ -38,14 +38,12 @@ def send_name(event=None):  # event is passed by binders.
 
 def send(event=None):  # event is passed by binders.
     """Handles sending of messages."""
-    msg = "@" + my_destinatario.get()+"@"+my_assunto.get()+"@"+my_msg.get()
-    my_destinatario.set("")  # Clears input field.
-    my_assunto.set("")
-    my_msg.set("")      # Clears input field.
-    client_socket.send(bytes(msg, "utf8"))
-    if msg == "{quit}":
-        client_socket.close()
-        janela.quit()
+    if my_destinatario.get() != "" and my_msg.get() != "":
+        msg = "@" + my_destinatario.get()+"@"+my_assunto.get()+"@"+my_msg.get()
+        my_destinatario.set("")  # Clears input field.
+        my_assunto.set("")
+        my_msg.set("")      # Clears input field.
+        client_socket.send(bytes(msg, "utf8"))
 
 
 def sair(event=None):  # event is passed by binders.
@@ -63,9 +61,9 @@ def on_closing(event=None):
     send()
 
 janela = tkinter.Tk()
-janela.title("Client1")
+janela.title("Client3")
 janela.configure(bg="#DCDCDC")
-janela.geometry("+100+100")
+janela.geometry("+905+10")
 
 
 messages_frame = tkinter.Frame(janela)
@@ -103,7 +101,7 @@ e_mensagem.bind("<Return>", )
 
 janela.protocol("WM_DELETE_WINDOW", on_closing)
 
-b_enviar_nome = tkinter.Button(janela, text="Enviar Nome", font="Verdana 14 bold", height=1, border=3,
+b_enviar_nome = tkinter.Button(janela, text="    Enviar Nome    ", font="Verdana 14 bold", height=1, border=3,
                                relief="groove", fg="#2F4F4F", command=send_name)
 b_enviar = tkinter.Button(janela, text="Enviar Mensagem", font="Verdana 14 bold", height=1, border=3,
                           relief="groove", fg="#2F4F4F", command=send)
@@ -120,20 +118,20 @@ l_divisoriae.grid(row=0, column=0, rowspan=13, sticky="n"+"s")
 l_divisoriaw.grid(row=0, column=3, rowspan=14, sticky="n"+"s")
 
 l_seu_nome.grid(row=1, column=1, sticky="w")
-l_destinatario.grid(row=2, column=1, sticky="w")
-l_assunto.grid(row=3, column=1, sticky="w")
-l_mensagem.grid(row=4, column=1, sticky="w")
+l_destinatario.grid(row=3, column=1, sticky="w")
+l_assunto.grid(row=4, column=1, sticky="w")
+l_mensagem.grid(row=5, column=1, sticky="w")
 l_divisoriac.grid(row=8, column=1)
 l_caixa_de_entrada.grid(row=9, column=1, columnspan=3)
 
 e_seu_nome.grid(row=1, column=2)
-e_destinatario.grid(row=2, column=2)
-e_assunto.grid(row=3, column=2)
-e_mensagem.grid(row=4, column=2)
+e_destinatario.grid(row=3, column=2)
+e_assunto.grid(row=4, column=2)
+e_mensagem.grid(row=5, column=2)
 
 
-b_enviar.grid(row=5, column=2, sticky="n")
-b_enviar_nome.grid(row=6, column=2, sticky="n")
+b_enviar.grid(row=6, column=2, sticky="n")
+b_enviar_nome.grid(row=2, column=2, sticky="n")
 b_sair.grid(row=12, column=1, columnspan=3)
 
 
