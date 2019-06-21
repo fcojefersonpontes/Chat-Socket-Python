@@ -1,6 +1,8 @@
 # Chat-Socket-Python
 Trabalho final da disciplina redes de computadores
 
+Video explicativo: https://youtu.be/BHNBAwU1Sr4
+
 Implementação de um chat com sockets de rede, com 3 (três) aplicações de usuáriostrocando mensagens entre pares, com os seguintes requisitos:
 
 •Somente a aplicação do destinatário deve exibir a mensagem;
